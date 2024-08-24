@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.xxxxxxxx.advancedcalculator">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="AdvancedCalculator"
+        android:supportsRtl="true"
+        android:hasCode="false"
+        tools:targetApi="31">
+        <activity
+            android:name="android.app.NativeActivity"
+            android:label="AdvancedCalculator"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="landscape"
+            android:exported="true">
+            <meta-data android:name="android.app.lib_name"
+                android:value="xxxxxxxxadvancedcalculator"/>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            tools:node="remove" />
+    </application>
+
+</manifest>
